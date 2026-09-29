@@ -7,6 +7,7 @@ public class BurgerSwarm extends Actor
     private int dx=0;
     private int dy=0;
     
+    public void setDiff(int dx, int dy){
         this.dx=dx;
         this.dy=dy;
     }
