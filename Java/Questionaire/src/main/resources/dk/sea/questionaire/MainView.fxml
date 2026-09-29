@@ -13,7 +13,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <TextField layoutX="128.0" layoutY="89.0" prefHeight="50.0" prefWidth="251.0">
+      <TextField fx:id="txtName" layoutX="128.0" layoutY="89.0" prefHeight="50.0" prefWidth="251.0">
          <font>
             <Font size="28.0" />
          </font></TextField>
