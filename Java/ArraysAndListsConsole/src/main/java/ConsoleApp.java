@@ -1,7 +1,19 @@
+import java.util.ArrayList;
+
 public class ConsoleApp {
     private final static String EMPTY = "#";
     private final static String PLAYER_1 = "X";
     private final static String PLAYER_2 = "O";
+
+    Integer i = 5;
+    // int -> Integer
+    // char[] -> String
+    // char -> Character
+    // double -> Double
+
+    ArrayList<Integer> al = new ArrayList();
+
+    String s = null;
 
     private int[][] numbers = new int[3][3];
     public void main(String[] args){
@@ -13,6 +25,7 @@ public class ConsoleApp {
         printArray(numbers);
         System.out.println("Rhello!");
     }
+
 
     private void printArray(int[][] array){
         for (int r = 0; r < 3; r++) {
