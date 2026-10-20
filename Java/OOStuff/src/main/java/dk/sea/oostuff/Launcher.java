@@ -26,12 +26,14 @@ public class Launcher extends Animal {
         theRoom.add(h);
         theRoom.add(w);
         theRoom.add(chick);
-        theRoom.add(new Fly());
-
+        Fly f = new Fly();
+        theRoom.add(f);
+        // All animals are screaming they see the Lion!
         for(Animal a: theRoom){
             a.makeSound();
         }
 
+        // All animals are eaten by the Lion
         for(Animal a: theRoom){
             mufasa.eat(a);
         }
