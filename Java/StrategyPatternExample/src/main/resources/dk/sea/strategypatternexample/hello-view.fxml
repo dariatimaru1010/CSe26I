@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="381.0" prefWidth="432.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.sea.strategypatternexample.HelloController">
+   <children>
+       <Button layoutX="119.0" layoutY="297.0" onAction="#onHelloButtonClick" prefHeight="62.0" prefWidth="201.0" text="Sort cars" />
+      <ListView fx:id="listCars" layoutX="26.0" layoutY="14.0" prefHeight="200.0" prefWidth="387.0" />
+      <RadioButton fx:id="radioName" layoutX="38.0" layoutY="225.0" mnemonicParsing="false" text="Sort by Name">
+         <toggleGroup>
+            <ToggleGroup fx:id="grpSorting" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioPrice" layoutX="38.0" layoutY="252.0" mnemonicParsing="false" text="Sort by Price" toggleGroup="$grpSorting" />
+   </children>
+</AnchorPane>
