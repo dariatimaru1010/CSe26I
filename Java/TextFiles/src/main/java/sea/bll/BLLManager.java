@@ -2,10 +2,8 @@ package sea.bll;
 
 import sea.be.GameResult;
 import sea.dal.GameResultDAO;
-import sea.dal.GameResultDatabaseDAO;
 import sea.dal.IGameResultDAO;
 
-import java.io.File;
 import java.util.List;
 
 public class BLLManager {
