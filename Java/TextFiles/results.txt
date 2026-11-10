@@ -1,3 +1,8 @@
 Alice;Bob;Bob
 Peter;Jenny;draw
 Jenny;Bob;Jenny
+Bob;Pete;draw
+Bob;Pete;draw
+Bob;Pete;draw
+Bob;Pete;draw
+Bob;Pete;draw

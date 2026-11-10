@@ -3,12 +3,19 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args)  {
-        List<GameResult> results = fetchResultsFromFile(new File("results.txt"));
+        File file = new File("results.txt");
+        List<GameResult> results = fetchResultsFromFile(file);
         for(GameResult gr : results){
             printGameResult(gr);
         }
 
+        GameResult gr = new GameResult(0, "Bob", "Pete", "draw");
+        addGameResultToFile(gr, file);
 
+        List<GameResult> results2 = fetchResultsFromFile(file);
+        for(GameResult gr2 : results2){
+            printGameResult(gr2);
+        }
 
 
         /*
@@ -22,6 +29,19 @@ public class Main {
             System.out.println(ioe);
         }*/
 
+    }
+
+    private static void addGameResultToFile(GameResult gr, File file){
+        String line = gr.getPlayer1() + ";" +
+                      gr.getPlayer2() + ";" +
+                      gr.getWinner();
+        try (FileWriter fw = new FileWriter(file, true)){
+            fw.write(line + "\n");
+        }
+        catch(IOException ioe){
+            // provide the user with a good reason for error and handle it
+            System.out.println("Error writing to the file");
+        }
     }
 
     private static List<GameResult> fetchResultsFromFile(File file) {
