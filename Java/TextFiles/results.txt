@@ -6,3 +6,9 @@ Bob;Pete;draw
 Bob;Pete;draw
 Bob;Pete;draw
 Bob;Pete;draw
+Bob;Pete;draw
+Bob;Pete;draw
+Bob;Pete;draw
+Bobby;Peter;draw
+Bobby;Peter;draw
+Bobby;Peter;draw

@@ -1,3 +1,5 @@
+package sea.be;
+
 public class GameResult {
     private int gameNumber;
     private String player1;
@@ -14,7 +16,6 @@ public class GameResult {
     public int getGameNumber(){
         return gameNumber;
     }
-
     public String getPlayer1(){
         return player1;
     }
