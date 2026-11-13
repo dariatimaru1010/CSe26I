@@ -1,6 +1,8 @@
 package sea.be;
 
-public class GameResult {
+import java.io.Serializable;
+
+public class GameResult implements Serializable {
     private int gameNumber;
     private String player1;
     private String player2;

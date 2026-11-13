@@ -2,10 +2,9 @@ package sea.dal;
 
 import sea.be.GameResult;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -53,5 +52,23 @@ public class GameResultDAO implements IGameResultDAO {
         }
         return results;
     }
+/*
+    // using java.nio
+    private List<GameResult> fetchResultsFromFile(File file) {
+        List<GameResult> results = new ArrayList();
+        Path path = Path.of(file.toURI());
+        try {
+            List<String> lines = Files.readAllLines(path);
+            int i = 0;
+            for(String line : lines) {
+                String[] data = line.split(";");
+                GameResult gr = new GameResult(++i, data[0], data[1], data[2]);
+                results.add(gr);
+            }
 
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return results;
+    }*/
 }
