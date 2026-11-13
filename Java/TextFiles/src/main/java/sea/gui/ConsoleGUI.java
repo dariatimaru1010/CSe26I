@@ -3,10 +3,10 @@ package sea.gui;
 import sea.be.GameResult;
 import sea.bll.BLLManager;
 
-import java.util.*;
+import java.util.List;
 
-public class Main {
-    public static void main(String[] args)  {
+public class ConsoleGUI {
+    public void startGUI(){
         BLLManager bll = new BLLManager();
         List<GameResult> results = bll.getResults();
         for(GameResult gr : results){
@@ -21,8 +21,6 @@ public class Main {
             printGameResult(gr2);
         }
     }
-
-
     public static void printGameResult(GameResult gr){
         System.out.println("Game #" + gr.getGameNumber());
         System.out.println("First player: " + gr.getPlayer1());

@@ -28,4 +28,12 @@ public class GameResult implements Serializable {
         return winner;
     }
 
+    @Override
+    public String toString(){
+        return "#" + gameNumber + " | " +
+                player1 + " | " +
+                player2 + " | " +
+                winner;
+    }
+
 }
