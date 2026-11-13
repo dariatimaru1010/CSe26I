@@ -1,5 +1,6 @@
 package sea.bll;
 
+import sea.util.GameResultException;
 import sea.be.GameResult;
 import sea.dal.GameResultDAO;
 import sea.dal.GameResultDatabaseDAO;
@@ -8,9 +9,9 @@ import sea.dal.IGameResultDAO;
 import java.util.List;
 
 public class BLLManager {
-    private final IGameResultDAO grdao = new GameResultDatabaseDAO();
+    private final IGameResultDAO grdao = new GameResultDAO();
 
-    public List<GameResult> getResults() {
+    public List<GameResult> getResults() throws GameResultException {
         return grdao.getResults();
     }
 

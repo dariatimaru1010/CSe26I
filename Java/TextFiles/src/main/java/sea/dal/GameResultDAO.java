@@ -1,6 +1,7 @@
 package sea.dal;
 
 import sea.be.GameResult;
+import sea.util.GameResultException;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -19,8 +20,12 @@ public class GameResultDAO implements IGameResultDAO {
     }
 
     @Override
-    public List<GameResult> getResults() {
-        return fetchResultsFromFile(file);
+    public List<GameResult> getResults() throws GameResultException {
+        try {
+            return fetchResultsFromFile(file);
+        } catch (FileNotFoundException e) {
+            throw new GameResultException(e.getMessage());
+        }
     }
 
     private void addGameResultToFile(GameResult gr, File file){
@@ -33,10 +38,11 @@ public class GameResultDAO implements IGameResultDAO {
         catch(IOException ioe){
             // provide the user with a good reason for error and handle it
             System.out.println("Error writing to the file");
+            throw new RuntimeException("ERROR"); // fix with own exception
         }
     }
 
-    private List<GameResult> fetchResultsFromFile(File file) {
+    private List<GameResult> fetchResultsFromFile(File file) throws FileNotFoundException {
         List<GameResult> results = new ArrayList();
         int i = 0;
         try (Scanner scanner = new Scanner(file)){
@@ -47,9 +53,12 @@ public class GameResultDAO implements IGameResultDAO {
                 GameResult gr = new GameResult(i, data[0], data[1], data[2]);
                 results.add(gr);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("No results yet");
-        }
+        } /*catch (FileNotFoundException e) {
+            System.out.println("No results yet" + e);
+             // BAD! ILLEGAL almost ;)
+            //Alert alert = new Alert(Alert.AlertType.ERROR,"No results yet" + e);
+            //alert.show();
+        }*/
         return results;
     }
 /*
