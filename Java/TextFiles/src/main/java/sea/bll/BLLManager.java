@@ -2,12 +2,13 @@ package sea.bll;
 
 import sea.be.GameResult;
 import sea.dal.GameResultDAO;
+import sea.dal.GameResultDatabaseDAO;
 import sea.dal.IGameResultDAO;
 
 import java.util.List;
 
 public class BLLManager {
-    private final IGameResultDAO grdao = new GameResultDAO();
+    private final IGameResultDAO grdao = new GameResultDatabaseDAO();
 
     public List<GameResult> getResults() {
         return grdao.getResults();
