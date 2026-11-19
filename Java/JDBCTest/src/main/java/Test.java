@@ -12,7 +12,7 @@ public class Test {
         ds.setPortNumber(1433);
         ds.setDatabaseName("CS2026b_e_24_TicTacToe");
         ds.setUser("CS2026b_e_24");
-        ds.setPassword("SCRETPASS");
+        ds.setPassword("CS2026bE24#26");
         ds.setTrustServerCertificate(true);
         String sql = "SELECT winner FROM GameResult where id=3";
         try (Connection con = ds.getConnection();
