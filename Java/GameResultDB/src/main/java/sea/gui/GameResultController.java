@@ -45,7 +45,9 @@ public class GameResultController implements Initializable {
 
     private void fetchData(){
         try {
-            List<GameResult> results = rm.findByPlayer("Alice");
+            // List<GameResult> results = rm.findByPlayer("Alice");
+            List<GameResult> results = rm.loadAll();
+
             tableResults.getItems().clear();
             tableResults.getItems().addAll(results);
         } catch (GameResultException e) {
