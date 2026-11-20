@@ -1,6 +1,6 @@
 package sea.dal;
 
-import sea.GameResultException;
+import sea.util.GameResultException;
 import sea.be.GameResult;
 
 import java.sql.*;

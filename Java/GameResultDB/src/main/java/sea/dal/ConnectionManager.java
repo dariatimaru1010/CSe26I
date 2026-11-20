@@ -2,7 +2,7 @@ package sea.dal;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
-import sea.GameResultException;
+import sea.util.GameResultException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
