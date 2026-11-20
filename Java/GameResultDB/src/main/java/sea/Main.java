@@ -11,11 +11,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        //ConsoleGUI console = new ConsoleGUI();
-        //console.start();
         //new ConsoleGUI().start();
         Application.launch(GameResultFX.class);
-
     }
 
 

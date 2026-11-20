@@ -63,7 +63,9 @@ public class ResultDAO {
                 results.add(createResult(rs));
             }
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new GameResultException("Problems fetching player from db",e);
+
         }
         return results;
     }
