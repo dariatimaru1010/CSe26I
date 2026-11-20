@@ -18,4 +18,8 @@ public class GameResult {
     public String getPlayerX() { return playerX; }
     public String getPlayerO() { return playerO; }
     public String getWinner() { return winner; }
+    @Override
+    public String toString(){
+        return id + ": " + playerX + " | " + playerO + " | " + winner;
+    }
 }
